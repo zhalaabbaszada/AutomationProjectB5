@@ -3,6 +3,7 @@ package io.loop.test.utilisies;
 public class LoopCampConstants {
     // url for registration form
     public static final String REGISTRATION_FORM_URL = "https://loopcamp.vercel.app/registration_form.html";
+    public static final String RADIOBUTTON_URL = " https://loopcamp.vercel.app/radio-buttons.html";
 
     //messages
     public static final String EXCEPTED_HEADER_fOR_fORM = "Registration form";
