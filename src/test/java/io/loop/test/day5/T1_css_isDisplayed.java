@@ -35,6 +35,5 @@ public class T1_css_isDisplayed{
         }else {
             System.out.println("Test fail");
         }
-
     }
 }
