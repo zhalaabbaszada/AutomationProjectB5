@@ -1,5 +1,7 @@
 package io.loop.test.utilisies;
 
+import org.openqa.selenium.By;
+
 public class DocuportConstants {
 
     // url for test env
@@ -14,6 +16,11 @@ public class DocuportConstants {
     // placeholders for username and password
     public static final String EXPECTED_PLACEHOLDER_FOR_USERNAME = "username or email";
     public static final String EXPECTED_PLACEHOLDER_FOR_PASSWORD = "password";
+
+    // username, password and login button locators
+    public static final By USERNAME_FIELD = By.xpath("//input[@id='input-14']");
+    public static final By PASSWORD_FIELD = By.xpath("//input[@id='input-15']");
+    public static final By LOGIN_BUTTON = By.xpath("//span[@class='v-btn__content']");
 
     //error messages
     public static final String EXPECTED_ERROR_MESSAGE_FOR_USERNAME = "please enter your username or email address";
