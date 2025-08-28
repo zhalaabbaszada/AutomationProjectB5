@@ -1,8 +1,8 @@
 package io.loop.test.day4;
 
-import io.loop.test.utilisies.GeneralConstants;
-import io.loop.test.utilisies.LoopCampConstants;
-import io.loop.test.utilisies.WebDriverUtil;
+import io.loop.test.utilities.GeneralConstants;
+import io.loop.test.utilities.LoopCampConstants;
+import io.loop.test.utilities.WebDriverUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

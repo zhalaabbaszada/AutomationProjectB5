@@ -1,4 +1,4 @@
-package io.loop.test.utilisies;
+package io.loop.test.utilities;
 
 public class GeneralConstants {
 

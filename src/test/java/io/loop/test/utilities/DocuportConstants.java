@@ -1,4 +1,4 @@
-package io.loop.test.utilisies;
+package io.loop.test.utilities;
 
 import org.openqa.selenium.By;
 
@@ -42,6 +42,12 @@ public class DocuportConstants {
 
     //email for reset password
     public static final String EMAIL_FOR_RESET_PASSWORD = "forgotpasswordg1@gmail.com";
+
+    // roles
+    public static String ADVISOR = "advisor";
+    public static String CLIENT = "client";
+    public static String SUPERVISOR = "supervisor";
+    public static String EMPLOYEE = "employee";
 
 
 
