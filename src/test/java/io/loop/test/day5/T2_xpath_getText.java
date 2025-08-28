@@ -1,8 +1,8 @@
 package io.loop.test.day5;
 
-import io.loop.test.utilisies.DocuportConstants;
-import io.loop.test.utilisies.GeneralConstants;
-import io.loop.test.utilisies.WebDriverUtil;
+import io.loop.test.utilities.DocuportConstants;
+import io.loop.test.utilities.GeneralConstants;
+import io.loop.test.utilities.WebDriverUtil;
 import org.openqa.selenium.*;
 
 /*

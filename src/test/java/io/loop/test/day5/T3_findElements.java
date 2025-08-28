@@ -1,14 +1,13 @@
 package io.loop.test.day5;
 
-import io.loop.test.utilisies.GeneralConstants;
-import io.loop.test.utilisies.WebDriverUtil;
+import io.loop.test.utilities.GeneralConstants;
+import io.loop.test.utilities.WebDriverUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class T3_findElements {
     public static void main(String[] args) throws InterruptedException {

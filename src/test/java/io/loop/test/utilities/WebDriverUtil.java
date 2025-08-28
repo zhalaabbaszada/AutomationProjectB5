@@ -1,4 +1,4 @@
-package io.loop.test.utilisies;
+package io.loop.test.utilities;
 
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.WebDriver;

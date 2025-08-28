@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.List;
 
 import static org.testng.Assert.assertEquals;
@@ -21,41 +22,46 @@ import static org.testng.Assert.assertTrue;
 public class T2_Iframes extends TestBase {
 
     @Test
-    public void iFrameTest(){
+    public void T2_iframesTest() throws InterruptedException {
         driver.get("https://loopcamp.vercel.app/iframe.html");
+        driver.manage().window().maximize();
 
-        //Switch to iframe by index
+        // Switch iframe by index
         //driver.switchTo().frame(0);
 
-        //Switch to iframe by name or id
-        //driver.switchTo().frame("mce_0_ifr");
+        // Switch with id or name
+        driver.switchTo().frame("mce_0_ifr");
 
-        //Switch to iframe by webElement
-        //WebElement iframe = driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']"));
-        //driver.switchTo().frame(iframe);
+        // Switch with webElement iframe
+//        WebElement iframe = driver.findElement(By.id("mce_0_ifr"));
+//        driver.switchTo().frame(iframe);
 
-        //WebElement someText = driver.findElement(By.xpath("//p[.='Your content goes here.']"));
-        //System.out.println("someText.getText() = " + someText.getText());
+        Thread.sleep(2000);
 
-        WebElement textBox = driver.findElement(By.xpath("//*[@id='tinymce']"));
+//        WebElement typingBoxElement = driver.findElement(By.xpath("//p[.='Your content goes here.']"));
+//        System.out.println(typingBoxElement.getText());
+
+        WebElement textBox = driver.findElement(By.xpath("//body[@id='tinymce']"));
         textBox.clear();
-        textBox.sendKeys("Loopcamp");
-        assertEquals(textBox.getText(), "Loopcamp", "Actual is not matching expected");
 
-        //Switch back to the main content
+        textBox.sendKeys("Loopcamp");
+
+        assertEquals(textBox.getText(), "Loopcamp");
+
         driver.switchTo().defaultContent();
 
-        WebElement header = driver.findElement(By.xpath("//h3[contains(text(),'iFrame')]"));
-        assertTrue(header.isDisplayed(), "Header is not displayed");
-
+        WebElement header =  driver.findElement(By.xpath("//h3[contains(.,'An iFrame')]"));
+        assertTrue(header.isDisplayed(), "Header not displayed");
     }
 
     @Test
     public void nestedFrame(){
         driver.get("https://loopcamp.vercel.app/nested-frames.html");
-        // Find all frames
-        List <WebElement> iframes;
-        iframes = driver.findElements(By.xpath("//frame"));
-        System.out.println("iframe size = " + iframes.size());
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        List<WebElement> frames = driver.findElements(By.xpath("//frame"));
+        System.out.println(frames.size());
     }
+
+
 }
