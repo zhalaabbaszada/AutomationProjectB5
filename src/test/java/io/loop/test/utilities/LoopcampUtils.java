@@ -12,7 +12,7 @@ public class LoopcampUtils {
      * @param name
      * @param field
      * @return
-     * @authpr ZA
+     * @authpr ZA (I did it by myself)
      */
     public static String returnAnyFieldFromTable(WebDriver driver, String name, String field) throws InterruptedException {
         WebElement element = null;
